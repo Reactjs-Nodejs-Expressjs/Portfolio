@@ -23,13 +23,13 @@ const Navbar = () => {
         <div className="flex items-center gap-1 min-[480px]:gap-1.5 sm:gap-2 cursor-pointer">
           <div className="flex text-primary">
             {/* Custom SVG matching the design */}
-            <svg className="w-[24px] h-[24px]" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-[28px] h-[28px]" viewBox="0 0 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <rect x="2" y="4" width="6" height="16" />
               <rect x="10" y="14" width="6" height="6" />
               <rect x="18" y="14" width="6" height="6" />
             </svg>
           </div>
-          <span className="text-[20px] min-[480px]:text-[22px] sm:text-[15px] md:text-[22px] font-semibold text-primary tracking-tight">AKHIL THADAKA</span>
+          <span className="text-[24px] min-[480px]:text-[22px] sm:text-[15px] md:text-[22px] font-semibold text-primary tracking-tight">AKHIL THADAKA</span>
         </div>
 
         {/* Desktop Nav */}
@@ -65,12 +65,12 @@ const Navbar = () => {
             onClick={() => setIsModalOpen(true)}
             className="bg-primary text-white px-5 py-2.5 rounded-xl font-medium text-[15px] hover:bg-[#035f45] transition-colors shadow-sm"
           >
-            Hire Me
+            Hire Me Know
           </button>
         </div>
 
         {/* Mobile Morphed Menu */}
-        <div className="lg:hidden">
+        <div className="lg:hidden relative w-[80px] h-[34px] min-[480px]:w-[110px] min-[480px]:h-[46px]">
           <MorphedMenu 
             btnClosedBg="#FF5300" 
             btnClosedColor="#FFF" 

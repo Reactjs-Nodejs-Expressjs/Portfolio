@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const AboutStats = () => {
   return (
-    <section className="relative z-20 bg-[#f8f9fa] text-[#111] py-32 px-6 md:px-12 lg:px-20 overflow-hidden font-sans rounded-b-[3rem]">
+    <section className="relative z-20 bg-[#f8f9fa] text-[#111] py-16 min-[480px]:py-24 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden font-sans rounded-b-[3rem]">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-20">
         
         {/* Top Header Section */}

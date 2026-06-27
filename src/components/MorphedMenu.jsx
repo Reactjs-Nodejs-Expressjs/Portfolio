@@ -99,8 +99,8 @@ function Menubutton({
         cursor: "pointer",
         fontFamily: "inherit",
         zIndex: 2,
-        width: isMobile ? `${Math.round(64 + (100 - 64) * Math.min(Math.max((windowWidth - 320) / (768 - 320), 0), 1))}px` : "110px",
-        height: isMobile ? `${Math.round(28 + (44 - 28) * Math.min(Math.max((windowWidth - 320) / (768 - 320), 0), 1))}px` : "46px",
+        width: isMobile ? `${Math.round(80 + (110 - 80) * Math.min(Math.max((windowWidth - 320) / (768 - 320), 0), 1))}px` : "110px",
+        height: isMobile ? `${Math.round(34 + (46 - 34) * Math.min(Math.max((windowWidth - 320) / (768 - 320), 0), 1))}px` : "46px",
         borderRadius: "25px",
         overflow: "hidden",
         border: "none",
@@ -245,8 +245,8 @@ export default function MorphedMenu(props) {
     return Math.round(minSize + (maxSize - minSize) * scale);
   };
 
-  const buttonWidth = isMobile ? `${fluid(64, 100)}px` : "110px";
-  const buttonHeight = isMobile ? `${fluid(28, 44)}px` : "46px";
+  const buttonWidth = isMobile ? `${fluid(80, 110)}px` : "110px";
+  const buttonHeight = isMobile ? `${fluid(34, 46)}px` : "46px";
 
   // Responsive sizes that auto-scale with screen width
   const mobileNavFontSize = fluid(20, navFontSizeMobile);

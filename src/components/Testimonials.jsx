@@ -110,7 +110,7 @@ const TestimonialCard = ({ data }) => {
 
 const Testimonials = () => {
   return (
-    <section className="py-32 bg-white text-[#111] overflow-hidden" id="testimonials">
+    <section className="py-16 min-[480px]:py-24 md:py-32 bg-white text-[#111] overflow-hidden" id="testimonials">
       <div className="max-w-7xl mx-auto px-6 mb-20 text-center flex flex-col items-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

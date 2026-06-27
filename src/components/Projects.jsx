@@ -24,7 +24,7 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <section className="bg-[#f8f9fa] text-[#111] py-32 px-6 md:px-12 lg:px-20 overflow-hidden font-sans rounded-t-[3rem]">
+    <section className="bg-[#f8f9fa] text-[#111] py-16 min-[480px]:py-24 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden font-sans rounded-t-[3rem]">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-16">
         
         {/* Header Section: Left Title, Right Description */}
@@ -87,18 +87,26 @@ const Projects = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 pointer-events-none"></div>
 
               {/* Hover Overlay: View Project */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-30">
-                <div className="bg-[#ff4422] text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,68,34,0.6)] cursor-pointer">
+              <div className="absolute inset-0 bg-black/40 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-30 pointer-events-none">
+                <div className="hidden md:flex pointer-events-auto bg-[#ff4422] text-white px-6 py-3 rounded-full font-bold items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,68,34,0.6)] cursor-pointer">
                   <span>View Project</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </div>
               </div>
-              <div className="absolute bottom-6 left-0 right-0 flex flex-wrap gap-2 justify-center z-20 pointer-events-none">
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">React</span>
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">Node.js</span>
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">Tailwind</span>
+              <div className="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-3 z-40 pointer-events-none">
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">React</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">Node.js</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">Tailwind</span>
+                </div>
+                <div className="md:hidden pointer-events-auto bg-[#ff4422] text-white px-5 py-2.5 rounded-full text-xs font-bold flex items-center gap-1.5 cursor-pointer shadow-lg w-max hover:bg-[#e03a1a]">
+                  <span>View Project</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
             </div>
             <div>
@@ -117,7 +125,7 @@ const Projects = () => {
           >
             {/* Small top card */}
             <div className="bg-[#c0ff00] rounded-3xl p-6 flex justify-between items-center hover:scale-[1.02] transition-transform duration-500 cursor-pointer shadow-sm">
-              <span className="text-black font-bold text-sm tracking-wide">VIEW CASE STUDY</span>
+              <span className="text-black font-bold text-sm tracking-wide">View More Project</span>
               <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7" />
@@ -136,18 +144,26 @@ const Projects = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 pointer-events-none"></div>
 
               {/* Hover Overlay: View Project */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-30">
-                <div className="bg-[#ff4422] text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,68,34,0.6)] cursor-pointer">
+              <div className="absolute inset-0 bg-black/40 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-30 pointer-events-none">
+                <div className="hidden md:flex pointer-events-auto bg-[#ff4422] text-white px-6 py-3 rounded-full font-bold items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,68,34,0.6)] cursor-pointer">
                   <span>View Project</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </div>
               </div>
-              <div className="absolute bottom-6 left-0 right-0 flex flex-wrap gap-2 justify-center z-20 pointer-events-none">
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">Next.js</span>
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">Tailwind</span>
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">Firebase</span>
+              <div className="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-3 z-40 pointer-events-none">
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">Next.js</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">Tailwind</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">Firebase</span>
+                </div>
+                <div className="md:hidden pointer-events-auto bg-[#ff4422] text-white px-5 py-2.5 rounded-full text-xs font-bold flex items-center gap-1.5 cursor-pointer shadow-lg w-max hover:bg-[#e03a1a]">
+                  <span>View Project</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
             </div>
             <div className="mt-2">
@@ -175,19 +191,27 @@ const Projects = () => {
                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 pointer-events-none"></div>
 
                {/* Hover Overlay: View Project */}
-               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-30">
-                 <div className="bg-[#ff4422] text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,68,34,0.6)] cursor-pointer">
+               <div className="absolute inset-0 bg-black/40 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-30 pointer-events-none">
+                 <div className="hidden md:flex pointer-events-auto bg-[#ff4422] text-white px-6 py-3 rounded-full font-bold items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,68,34,0.6)] cursor-pointer">
                    <span>View Project</span>
                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                      <path d="M5 12h14M12 5l7 7-7 7" />
                    </svg>
                  </div>
                </div>
-              <div className="absolute bottom-6 left-0 right-0 flex flex-wrap gap-2 justify-center z-20 pointer-events-none">
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">React</span>
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">AWS</span>
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">MongoDB</span>
-              </div>
+               <div className="absolute bottom-6 left-0 right-0 flex flex-col items-center gap-3 z-40 pointer-events-none">
+                 <div className="flex flex-wrap gap-2 justify-center">
+                   <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">Vue.js</span>
+                   <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">Django</span>
+                   <span className="text-[10px] font-bold uppercase tracking-wider bg-white/90 backdrop-blur-sm text-black px-3 py-1.5 rounded-full shadow-sm">AWS</span>
+                 </div>
+                 <div className="md:hidden pointer-events-auto bg-[#ff4422] text-white px-5 py-2.5 rounded-full text-xs font-bold flex items-center gap-1.5 cursor-pointer shadow-lg w-max hover:bg-[#e03a1a]">
+                   <span>View Project</span>
+                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                     <path d="M5 12h14M12 5l7 7-7 7" />
+                   </svg>
+                 </div>
+               </div>
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2 group-hover:text-[#3b82f6] transition-colors">SaaS Application</h3>

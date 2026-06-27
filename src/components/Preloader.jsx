@@ -100,12 +100,12 @@ const StaggeredPreloader = ({ onComplete }) => {
         >
           {/* Base Layer */}
           <motion.h1
-            className="text-5xl md:text-7xl font-['Cinzel'] tracking-tight text-[#171717] mb-4 uppercase leading-none flex"
+            className="text-4xl min-[480px]:text-5xl md:text-7xl font-['Cinzel'] tracking-tight text-[#171717] mb-4 uppercase leading-none flex"
             variants={{
               hidden: { opacity: 1 },
               visible: {
                 opacity: 1,
-                transition: { staggerChildren: 0.04, delayChildren: 0.2 },
+                transition: { staggerChildren: 0.05, delayChildren: 0.2 },
               },
             }}
             initial="hidden"
@@ -115,10 +115,10 @@ const StaggeredPreloader = ({ onComplete }) => {
               <motion.span
                 key={i}
                 variants={{
-                  hidden: { opacity: 0, y: 50, rotateX: -60, filter: "blur(8px)" },
+                  hidden: { opacity: 0, y: 80, rotateX: -90, scale: 0.8, filter: "blur(12px)" },
                   visible: { 
-                    opacity: 1, y: 0, rotateX: 0, filter: "blur(0px)",
-                    transition: { type: "spring", damping: 20, stiffness: 150 }
+                    opacity: 1, y: 0, rotateX: 0, scale: 1, filter: "blur(0px)",
+                    transition: { type: "spring", damping: 15, stiffness: 120 }
                   }
                 }}
                 className="whitespace-pre inline-block"
@@ -130,12 +130,12 @@ const StaggeredPreloader = ({ onComplete }) => {
 
           {/* Masked Hover Layer */}
           <motion.h1
-            className="absolute top-0 left-0 text-5xl md:text-7xl font-['Cinzel'] tracking-tight mb-4 uppercase leading-none flex text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-teal-400 to-green-500 pointer-events-none"
+            className="absolute top-0 left-0 text-4xl min-[480px]:text-5xl md:text-7xl font-['Cinzel'] tracking-tight mb-4 uppercase leading-none flex text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-teal-400 to-green-500 pointer-events-none"
             variants={{
               hidden: { opacity: 1 },
               visible: {
                 opacity: 1,
-                transition: { staggerChildren: 0.04, delayChildren: 0.2 },
+                transition: { staggerChildren: 0.05, delayChildren: 0.2 },
               },
             }}
             initial="hidden"
@@ -151,10 +151,10 @@ const StaggeredPreloader = ({ onComplete }) => {
               <motion.span
                 key={`mask-${i}`}
                 variants={{
-                  hidden: { opacity: 0, y: 50, rotateX: -60, filter: "blur(8px)" },
+                  hidden: { opacity: 0, y: 80, rotateX: -90, scale: 0.8, filter: "blur(12px)" },
                   visible: { 
-                    opacity: 1, y: 0, rotateX: 0, filter: "blur(0px)",
-                    transition: { type: "spring", damping: 20, stiffness: 150 }
+                    opacity: 1, y: 0, rotateX: 0, scale: 1, filter: "blur(0px)",
+                    transition: { type: "spring", damping: 15, stiffness: 120 }
                   }
                 }}
                 className="whitespace-pre inline-block"
