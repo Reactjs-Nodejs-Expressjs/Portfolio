@@ -4,9 +4,11 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 
 import MorphedMenu from './MorphedMenu';
 import ContactModal from './ContactModal';
+import HireModal from './HireModal';
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const navLinks = [
     { name: 'Home', href: '#' },
     { name: 'AboutUs', href: '#' },
@@ -23,11 +25,18 @@ const Navbar = () => {
         <div className="flex items-center gap-1 min-[480px]:gap-1.5 sm:gap-2 cursor-pointer">
           <div className="flex text-primary">
             {/* Custom SVG matching the design */}
-            <svg className="w-[28px] h-[28px]" viewBox="0 0 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            {/* <svg className="w-[28px] h-[28px]" viewBox="0 0 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <rect x="2" y="4" width="6" height="16" />
-              <rect x="10" y="14" width="6" height="6" />
+              <rect x="10" y="14" width="6" height="10" />
               <rect x="18" y="14" width="6" height="6" />
+            </svg> */}
+
+            <svg class="w-[28px] h-[28px]" viewBox="0 0 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="4" width="6" height="16"></rect>
+            <rect x="10" y="8" width="6" height="12"></rect>
+            <rect x="18" y="14" width="6" height="6"></rect>
             </svg>
+
           </div>
           <span className="text-[24px] min-[480px]:text-[22px] sm:text-[15px] md:text-[22px] font-semibold text-primary tracking-tight">AKHIL THADAKA</span>
         </div>
@@ -38,6 +47,12 @@ const Navbar = () => {
             <div key={link.name} className="relative group py-2">
               <a 
                 href={link.href} 
+                onClick={(e) => {
+                  if (link.name === 'Contact') {
+                    e.preventDefault();
+                    setIsModalOpen(true);
+                  }
+                }}
                 className="text-slate-500 hover:text-slate-800 transition-colors text-[15px] font-medium flex items-center gap-1.5"
               >
                 {link.name}
@@ -62,7 +77,7 @@ const Navbar = () => {
         {/* CTA Button Desktop */}
         <div className="hidden lg:block">
           <button 
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => setIsHireModalOpen(true)}
             className="bg-primary text-white px-5 py-2.5 rounded-xl font-medium text-[15px] hover:bg-[#035f45] transition-colors shadow-sm"
           >
             Hire Me Know
@@ -79,10 +94,13 @@ const Navbar = () => {
             menuBackgroundColor="#111"
             menuTextColor="#FFF"
             hoverLineColor="#FF5300"
+            onContactClick={() => setIsModalOpen(true)}
+            onHireClick={() => setIsHireModalOpen(true)}
           />
         </div>
       </div>
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <HireModal isOpen={isHireModalOpen} onClose={() => setIsHireModalOpen(false)} />
     </nav>
   );
 };

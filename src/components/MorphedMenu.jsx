@@ -405,6 +405,15 @@ export default function MorphedMenu(props) {
                       <motion.a
                         href={link.url}
                         role="menuitem"
+                        onClick={(e) => {
+                          if (link.title === "Contact") {
+                            e.preventDefault();
+                            setClick(false);
+                            if (props.onContactClick) {
+                              props.onContactClick();
+                            }
+                          }
+                        }}
                         style={{
                           color: menuTextColor,
                           textDecoration: "none",
@@ -499,6 +508,13 @@ export default function MorphedMenu(props) {
               <a
                 href="#"
                 role="menuitem"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setClick(false);
+                  if (props.onHireClick) {
+                    props.onHireClick();
+                  }
+                }}
                 style={{
                   display: "block",
                   textAlign: "center",
@@ -539,3 +555,4 @@ export default function MorphedMenu(props) {
     </div>
   );
 }
+
