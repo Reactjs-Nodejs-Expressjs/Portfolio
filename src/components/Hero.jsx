@@ -57,9 +57,11 @@ const Hero = () => {
   }}
   className="text-[30px] min-[480px]:text-[34px] sm:text-[35px]  md:text-[40px] font-bold text-black leading-[1.1] tracking-tight"
 >
-  Brand & UI/UX<br />
-  Designer based<br />
-  in India
+           
+
+  AI Engineer & Website Developer<br />
+ Building Smart AI Solutions <br />
+  & Stunning Websites.
 </motion.h2>
         </div>
       </div>
