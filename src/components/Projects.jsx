@@ -5,20 +5,20 @@ const projectsData = [
   {
     title: "E-Commerce Platform",
     description: "A full-stack online store with seamless payment integration and modern UI.",
-    year: "2023",
-    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=2340&auto=format&fit=crop"
+    year: "2025",
+    image: "https://i.postimg.cc/RhMrV2t4/73711e30bd3306ed5a32a727ca2043ca-(1).jpg"
   },
   {
     title: "Fintech Dashboard",
     description: "Real-time data visualization and secure user portal for financial tracking.",
-    year: "2024",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+    year: "2026",
+    image: "https://i.postimg.cc/gJbF1xkW/a99aed376e491ececc20e3eabd039d03.jpg"
   },
   {
     title: "SaaS Application",
     description: "A multi-tenant software solution built for enterprise productivity.",
-    year: "2023",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2340&auto=format&fit=crop"
+    year: "2025",
+    image: "https://i.postimg.cc/wTqH6R5L/f6f0b2444ac6ec3ee1400a62131d0b73.jpg"
   }
 ];
 
